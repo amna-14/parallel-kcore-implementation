@@ -1,0 +1,23 @@
+=== Parallel k-Core Decomposition - Implementation Summary ===
+
+Environment:
+- Ubuntu 24.04 LTS (VMware)
+- 4 CPU cores
+- OpenCilk v3.0 (parallel compiler)
+
+Steps Done:
+1. Installed OpenCilk v3.0
+2. Cloned paper's repository
+3. Installed ParlayLib submodule
+4. Compiled with OpenCilk: make OPENCILK=1
+5. Downloaded and converted real-world graphs
+6. Ran experiments with 1, 2, 4 threads
+
+Results on Facebook (4K nodes, 88K edges, coreness=115):
+- 1 thread: 0.001633s
+- 4 threads: 0.001802s
+
+Results on DBLP (317K nodes, 1M edges, coreness=113):
+- 1 thread: 0.025745s
+- 2 threads: 0.028572s
+- 4 threads: 0.028382s
